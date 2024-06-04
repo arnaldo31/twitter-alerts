@@ -45,7 +45,7 @@ Open your command prompt (cmd) and run the following commands to install the nec
 
 
 ### 3. Download the Repository
-   - Download this repository's code from [GitHub](https://github.com/arnaldo31/twitter_alerts/heads/main.zip).
+   - Download this repository's code from [GitHub](https://github.com/arnaldo31/twitter_alertsrefs/heads/main.zip).
 
 ### 4. Unzip the File
    - Unzip the downloaded file. If you do not have an unzip application, you can download one [here](https://www.7-zip.org/a/7z2406-x64.exe).
@@ -64,7 +64,7 @@ Open your command prompt (cmd) and run the following commands to install the nec
 
 3. To get API KEYS, visit Twitter Developer. [TwitterDev](https://developer.twitter.com/).
 4. Go to Permissions and change OAuth 1.0a Authentication to "Read and write".
-   ![alt text](https://github.com/arnaldo31/twitter_alerts/blob/main/permit.png?raw=true)
+   ![alt text](https://github.com/arnaldo31/twitter-alerts/blob/main/permit.png?raw=true)
 
 5. Run the `main.py` script to start the scraping.
 6. Scrape results will be saved as `twitter_alerts.txt` located inside the save folder.
