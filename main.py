@@ -32,6 +32,14 @@ class Twitter:
         url = 'https://api.twitter.com/2/users/me'
         auth = OAuth1(consumer_key,consumer_secret,access_token,access_token_secret)
         res = requests.get(auth=auth,url=url)
+        if res.status_code == 401:
+            print(json.dumps(res.json(), indent=4, sort_keys=True))
+            print('')
+            print(' Invalid API credentials')
+            print('')
+            print('To get API KEYS, visit Twitter Developer. TwitterDev. https://developer.twitter.com/')
+            print('')
+            return False
         self.my_ID = res.json()['data']['id']
         
     def repost_tweet(self,tweet_id):
@@ -53,12 +61,12 @@ class Twitter:
 
     def read_twitter_alert_file(self):
         try:
-            twitter_alert_file = open('twitter_alerts.txt',encoding='UTF-8').read()
+            twitter_alert_file = open('.\\save\\twitter_alerts.txt',encoding='UTF-8').read()
         except:
             with open('.\\save\\twitter_alerts.txt', mode='w', encoding='UTF-8') as file:
                 file.write('')
                 file.close()
-            twitter_alert_file = open('twitter_alerts.txt',encoding='UTF-8',mode='r').read()
+            twitter_alert_file = open('.\\save\\twitter_alerts.txt',encoding='UTF-8',mode='r').read()
         
         if twitter_alert_file != '':
             dataFrame = json.loads(twitter_alert_file)
@@ -373,7 +381,9 @@ def Twitter_Scraper():
         # Script will run every 20 mins and post the top 2 with top like 
         
         twitter = Twitter(bearer_token=bearer_token,word=keyword) 
-        twitter.get_my_id()
+        creds = twitter.get_my_id()
+        if creds == False:
+            break
         twitter.scrape_word()
         twitter.repost_top()
         twitter.saving()
