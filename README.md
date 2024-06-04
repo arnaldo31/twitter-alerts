@@ -55,12 +55,14 @@ Open your command prompt (cmd) and run the following commands to install the nec
 1. Open the folder where this project is saved on your local machine.
 2. Open `.env` file as text file and edit the filters.
 
-    - keyword=Based
-    - bearer_token=
-    - consumer_key =
-    - consumer_secret =
-    - access_token=
-    - access_token_secret=
+    - keyword=`TARGET KEYWORD`
+    - bearer_token=`BEARER TOKEN`
+    - consumer_key =`CONSUMER KEY`
+    - consumer_secret =`CONSUMER SECRET`
+    - access_token=`ACCESS TOKEN`
+    - access_token_secret=`ACCESS TOKEN SECRET`
+
+   Make sure to replace the placeholder text with your actual credentials obtained from your Twitter Developer account. These credentials are necessary for authenticating your application and accessing Twitter's API.
 
 3. To get API KEYS, visit Twitter Developer. [TwitterDev](https://developer.twitter.com/).
 4. Go to Permissions and change OAuth 1.0a Authentication to "Read and write".
