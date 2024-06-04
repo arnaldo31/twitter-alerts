@@ -28,12 +28,12 @@ This project aims to automate the process of scraping tweets containing a specif
 
 ## Installation
 
-### 1. Install Python
+#### 1. Install Python
 
 - Ensure you have [Python](https://www.python.org/downloads/) installed.
 - During installation, check the `Add to PATH` checkbox.
 
-### 2. Install Required Packages
+#### 2. Install Required Packages
 Open your command prompt (cmd) and run the following commands to install the necessary packages:
 
      ```
@@ -44,10 +44,10 @@ Open your command prompt (cmd) and run the following commands to install the nec
      ```
 
 
-### 3. Download the Repository
+#### 3. Download the Repository
    - Download this repository's code from [GitHub](https://github.com/arnaldo31/twitter-alerts/archive/refs/heads/main.zip).
 
-### 4. Unzip the File
+#### 4. Unzip the File
    - Unzip the downloaded file. If you do not have an unzip application, you can download one [here](https://www.7-zip.org/a/7z2406-x64.exe).
 
 ## How to Use
